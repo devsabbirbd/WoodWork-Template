@@ -1,0 +1,231 @@
+/* Default Css */
+img{
+    max-width: 100%;
+}
+a{
+    text-decoration: none !important;
+    display: inline-block;
+}
+.overlay{
+    position: relative;
+    z-index: 1;
+}
+.overlay::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+/* Header Css */
+header {
+    background-color: #24221eb8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+}
+header .logo {
+    width: 80%;
+}
+header .logo  a {
+    line-height: 70px;
+}
+
+/* Header Menu */
+header nav ul{
+    list-style: none;
+}
+header nav ul li {
+    display: inline-block;
+    position: relative;
+}
+header nav ul li a {
+    color: #fff;
+    text-transform: capitalize;
+    padding: 20px;
+    position: relative;
+    transition: 0.5s;
+}
+header nav ul li a.active{
+    color:#c69453;
+}
+header nav ul li a i {
+    font-size: 0.8em !important;
+}
+header nav ul li a:after {
+    content: "";
+    position: absolute;
+    top: 98%;
+    left: 0;
+    right: 0;
+    width: 0%;
+    height: 1.5px;
+    margin: auto;
+    background: #c69453;
+    z-index: 2;
+    transition: 0.5s;
+}
+/* DropDown Menu */
+header nav ul li ul.dropdown {
+    background: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 5;
+    width: 230px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: scaleY(0);
+    transform-origin: center center;
+    transition: 0.15s;
+}
+header nav ul li ul.dropdown li a{
+    color: #000;
+    display: block;
+    padding: 15px;
+
+}
+header nav ul li ul li{
+    display: block;
+}
+/* Menu Hover Effect */
+header nav ul li a:hover, header nav ul li ul li a:hover{
+    color:#c69453;
+}
+header nav ul li a:hover:after{
+    width: 100%;
+}
+header nav ul li ul li a:hover{
+    background: #c0bfc0;
+}
+header nav ul li ul li a:hover:after{
+    width: 0%;
+}
+/* Hover for DropDown */
+header nav ul li:hover ul.dropdown{
+    opacity: 1;
+    visibility: visible;
+    transform: scaleY(1);
+}
+
+
+
+
+
+/* Banner Css */
+section.banner {
+    background: url(https://i.ibb.co/FwcXyCW/banner.jpg) no-repeat center center;
+    background-size: cover;
+    padding: 170px 0;
+}
+section.banner::after {
+    background-color: black;
+    opacity: 0.7;
+}
+.banner-subTitle {
+    font-weight: 400;
+    position: relative;
+}
+.banner-subTitle::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -32%;
+    width: 25%;
+    height: 1px;
+    background: #fff;
+}
+.banner-subTitle::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -32%;
+    width: 25%;
+    height: 1px;
+    background: #fff;
+}
+.banner .btn{
+    background:#c69453;
+    transition: 0.5s;
+}
+.banner .btn:hover {
+    color: #c69453 !important;
+    background: #fff !important;
+}
+/* service css */
+.service,.about{
+    background-color: #f8f8f8;
+    padding: 100px 0;
+}
+.service .item {
+    box-shadow: 3px 3px 20px 0px #c2b9b94a;
+    transition: 0.5s;
+}
+.service .item:hover{
+    background: #e6e3e2 !important;
+}
+.service .item img{
+    transition: 0.5s;
+}
+.service .item:hover img{
+    transform: rotateY(360deg);
+}
+.service .item:hover a.btn{
+    background: #ffffff !important;
+    color: #c69453 !important;
+}
+.service .item a.btn:hover{
+    background: #000 !important;
+    color: #fff !important;
+    transform: translateY(10px);
+}
+.service .btn {
+    background: #c69453;
+    padding: 8px 25px;
+    margin: 15px 0px;
+    transition: 0.5s;
+}
+
+/* About css */
+.about-title span{
+    color: #c69453;
+}
+.about .aboutBtn{
+    background-color: #000;
+    color:#fff;
+    transition: 0.5s;
+
+}
+.about .aboutBtn:hover {
+    background: #c69453 !important;
+    color: #fff !important;
+}
+
+/* Contact css */
+.contact {
+    background: url(https://i.ibb.co/kMtmNpB/content.jpg) no-repeat right bottom;
+    background-size: cover;
+    padding: 100px 0;
+}
+.contact input:focus,.contact textarea:focus{
+    border-color:#000 !important;
+    box-shadow: 0 0 0 1.5px rgb(0 0 0);
+}
+.contact .contactbtn{
+    background-color: #c69453;
+    color:#fff;
+}
+input.contactbtn.btn:hover {
+    background: #c69453 !important;
+    color: #fff !important;
+}
+
+/* Footer Css */
+footer{
+    background-color: #6d6d6d;
+}
